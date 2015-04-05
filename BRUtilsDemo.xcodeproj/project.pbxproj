@@ -15,6 +15,7 @@
 		9E96A61F1AD1912D00708F04 /* BRUtilsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E96A61E1AD1912D00708F04 /* BRUtilsDemoTests.m */; };
 		9ED0FC0A1AD1922500B839E9 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED0FC091AD1922500B839E9 /* MenuViewController.m */; };
 		9ED0FC0D1AD1934A00B839E9 /* DateExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED0FC0C1AD1934A00B839E9 /* DateExampleViewController.m */; };
+		9ED0FC101AD1971700B839E9 /* BRDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED0FC0F1AD1971700B839E9 /* BRDateUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		9ED0FC091AD1922500B839E9 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		9ED0FC0B1AD1934A00B839E9 /* DateExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateExampleViewController.h; sourceTree = "<group>"; };
 		9ED0FC0C1AD1934A00B839E9 /* DateExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateExampleViewController.m; sourceTree = "<group>"; };
+		9ED0FC0E1AD1971700B839E9 /* BRDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRDateUtils.h; sourceTree = "<group>"; };
+		9ED0FC0F1AD1971700B839E9 /* BRDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRDateUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				9E96A60C1AD1912C00708F04 /* Main.storyboard */,
 				9ED0FC0B1AD1934A00B839E9 /* DateExampleViewController.h */,
 				9ED0FC0C1AD1934A00B839E9 /* DateExampleViewController.m */,
+				9ED0FC0E1AD1971700B839E9 /* BRDateUtils.h */,
+				9ED0FC0F1AD1971700B839E9 /* BRDateUtils.m */,
 				9E96A60F1AD1912C00708F04 /* Images.xcassets */,
 				9E96A6111AD1912C00708F04 /* LaunchScreen.xib */,
 				9E96A6021AD1912C00708F04 /* Supporting Files */,
@@ -226,6 +231,7 @@
 			files = (
 				9E96A6081AD1912C00708F04 /* AppDelegate.m in Sources */,
 				9ED0FC0A1AD1922500B839E9 /* MenuViewController.m in Sources */,
+				9ED0FC101AD1971700B839E9 /* BRDateUtils.m in Sources */,
 				9E96A6051AD1912C00708F04 /* main.m in Sources */,
 				9ED0FC0D1AD1934A00B839E9 /* DateExampleViewController.m in Sources */,
 			);
