@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MenuViewController.h
 //  BRUtilsDemo
 //
 //  Created by Bobby Ren on 4/5/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MenuViewController : UITableViewController
 
 @end
-
