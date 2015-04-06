@@ -13,8 +13,9 @@
 +(NSDate *)mondayOfWeekForDate:(NSDate *)date;
 +(NSDate *)sundayOfWeekForDate:(NSDate *)date;
 
-//#pragma mark Date formatters
-//+(NSDateFormatter *)yearMonthDayFormatter;
+#pragma mark Month and year
++(NSString *)monthForDate:(NSDate *)date format:(int)monthFormat;
++(NSString *)yearForDate:(NSDate *)date;
 
 #pragma mark Date format functions
 +(NSString *)yearMonthDayForDate:(NSDate *)date;

@@ -31,6 +31,44 @@
     return sunday;
 }
 
+#pragma mark Month and year
+static const NSArray *monthsShort;
+static const NSArray *monthsFull;
+
++(const NSArray *)monthsShort {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        monthsShort = @[@"Dec", @"Jan", @"Feb", @"Mar", @"Apr", @"May", @"Jun", @"Jul", @"Aug", @"Sep", @"Oct", @"Nov", @"Dec"];
+    });
+    return monthsShort;
+}
+
++(const NSArray *)monthsFull {
+    static dispatch_once_t onceToken2;
+    dispatch_once(&onceToken2, ^{
+        monthsFull = @[@"December", @"January", @"February", @"March", @"April", @"May", @"June", @"July", @"August", @"September", @"October", @"November", @"December"];
+    });
+    return monthsFull;
+}
+
++(NSString *)monthForDate:(NSDate *)date format:(int)monthFormat {
+    // monthFormat: 0 = MON, 1 = Mon, 2 = Month
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSMonthCalendarUnit|NSYearCalendarUnit fromDate:date];
+    NSInteger month = components.month;
+
+    if (monthFormat == 0)
+        return self.monthsShort[month];
+    else
+        return self.monthsFull[month];
+}
+
++(NSString *)yearForDate:(NSDate *)date {
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSMonthCalendarUnit|NSYearCalendarUnit fromDate:date];
+    NSInteger year = components.year;
+
+    return [NSString stringWithFormat:@"%lu", year];
+}
+
 #pragma mark Date formatters
 static NSDateFormatter *yearMonthDayFormatter;
 static NSDateFormatter *hourMinAMPMFormatter;
