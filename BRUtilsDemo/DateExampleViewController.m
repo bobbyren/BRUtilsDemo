@@ -7,6 +7,7 @@
 //
 
 #import "DateExampleViewController.h"
+#import <BRDateUtils.h>
 
 @interface DateExampleViewController ()
 
@@ -38,7 +39,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,7 +55,32 @@
         case 0:
         {
             cell.textLabel.text = @"Current Time";
-            detailsLabel.text = [NSString stringWithFormat:@"%@", [NSDate date]];
+            detailsLabel.text = [BRDateUtils simpleTimeForDate:[NSDate date]];
+        }
+            break;
+
+        case 1:
+        {
+            cell.textLabel.text = @"Monday of this week";
+            NSDate *monday = [BRDateUtils mondayOfWeekForDate:[NSDate date]];
+            detailsLabel.text = [BRDateUtils yearMonthDayForDate:monday];
+        }
+            break;
+
+        case 2:
+        {
+            cell.textLabel.text = @"Sunday of this week";
+            NSDate *sunday = [BRDateUtils sundayOfWeekForDate:[NSDate date]];
+            detailsLabel.text = [BRDateUtils yearMonthDayForDate:sunday];
+        }
+            break;
+
+        case 3:
+        {
+            cell.textLabel.text = @"Month and year";
+            NSString *month = [BRDateUtils monthForDate:[NSDate date] format:1];
+            NSString *year = [BRDateUtils yearForDate:[NSDate date]];
+            detailsLabel.text = [NSString stringWithFormat:@"%@, %@", month, year];
         }
             break;
 
